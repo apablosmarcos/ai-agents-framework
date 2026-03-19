@@ -97,6 +97,7 @@ echo "  ✓ CLAUDE.md → .agents/agents.md"
 
 while IFS= read -r -d '' skill; do
   skill_rel="${skill#$SKILLS_DIR/}"
+  [[ "$skill_rel" == "$skill" ]] && skill_rel="${skill#$CORE_DIR/skills/}"
   link_name="${skill_rel//\//-}"
   ln -sf "$skill" "$ROOT/.claude/commands/$link_name"
   echo "  ✓ .claude/commands/$link_name"
@@ -119,6 +120,7 @@ done < <(find "$ROOT/.cursor/rules" -maxdepth 1 -type f -print0 2>/dev/null)
 
 while IFS= read -r -d '' skill; do
   skill_rel="${skill#$SKILLS_DIR/}"
+  [[ "$skill_rel" == "$skill" ]] && skill_rel="${skill#$CORE_DIR/skills/}"
   link_name="${skill_rel//\//-}"
   ln -sf "$skill" "$ROOT/.cursor/rules/$link_name"
   echo "  ✓ .cursor/rules/$link_name"
