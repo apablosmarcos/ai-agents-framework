@@ -276,19 +276,6 @@ Contenido con las reglas, patrones, ejemplos y checklists del dominio.
 
 ---
 
-## Ejemplo real
-
-Este framework nació del proyecto [api-blockchain](https://github.com/apablosmarcos/ai-agents-framework) (API REST sobre Hyperledger Fabric). Sus skills de dominio son:
-
-- `api-node.md` — patrones para controllers, services y utils en Node.js/Express
-- `entities.md` — sistema de estrategias por tipo de entidad
-- `errores.md` — manejo centralizado de errores con contrato HTTP 200
-- `nodejs-backend-patterns/SKILL.md` — arquitectura general de backends Node.js
-
-El framework extrae las partes universales (protocolo del agente, sincronización, meta-skills) a este repo, mientras que esas skills de dominio permanecen en el proyecto.
-
----
-
 ## Requisitos
 
 - **Bash 4+** (macOS usa Bash 3 por defecto — instalar con `brew install bash`)
